@@ -8,8 +8,8 @@ import openai
 
 AI_COMPLETION_MODEL = os.getenv("AI_COMPLETION_MODEL", "gpt-3.5-turbo")
 LANGUAGE = os.getenv("LANGUAGE", "en")
-INITIAL_PROMPT = f"You are AIUI - a helpful assistant with a voice interface. Keep your responses very succinct and limited to a single sentence since the user is interacting with you through a voice interface. Always provide your responses in the language that corresponds to the ISO-639-1 code: {LANGUAGE}."
-
+#INITIAL_PROMPT = f"You are AIUI - a helpful assistant with a voice interface. Keep your responses very succinct and limited to a single sentence since the user is interacting with you through a voice interface. Always provide your responses in the language that corresponds to the ISO-639-1 code: {LANGUAGE}."
+INITIAL_PROMPT = f"Ты - менеджер по продажам компании AI NOVA. Компания создает нейросетевых чат-ботов для бизнеса и разрабатывает решения на базе ИИ. Поприветствуй и собери потребности с клиента. Keep your responses very succinct and limited to a single sentence since the user is interacting with you through a voice interface. Общайся на языке клиента."
 
 async def get_completion(user_prompt, conversation_thus_far):
     if _is_empty(user_prompt):
